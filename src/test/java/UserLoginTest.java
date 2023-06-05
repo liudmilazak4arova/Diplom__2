@@ -17,7 +17,5 @@ public class UserLoginTest extends UserBaseTest {
         UserLoginRequest userLoginRequest = new UserLoginRequest(UserData.email, UserData.password);
         Response responseLogin = userClient.userLoginResponse(userLoginRequest);
         responseLogin.then().assertThat().statusCode(200).and().body("success", equalTo(true));
-    //    token = responseLogin.then().extract().path("accessToken");
-     //   System.out.println(token);
     }
 }

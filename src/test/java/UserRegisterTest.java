@@ -14,6 +14,5 @@ public class UserRegisterTest extends UserBaseTest{
         Response response = userClient.userRegisterResponse(userRegisterRequest);
         response.then().assertThat().statusCode(200).and().body("success", equalTo(true));
         token = response.then().extract().path("accessToken");
-        System.out.println(token);
     }
 }

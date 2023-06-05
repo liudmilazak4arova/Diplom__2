@@ -1,18 +1,15 @@
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.Response;
 import org.junit.Test;
-
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
-
 import static org.hamcrest.CoreMatchers.equalTo;
 
 public class OrderCreateAuthorizedTest extends OrderBaseTest {
 
     @Test
     @DisplayName("Заказ из всех ингридиентов с авторизацией")
-    public void orderCreateAuyhorizedTest() {
+    public void orderCreateAuthorizedTest() {
 
         IngridientsResponse responseIngridients = orderClient.ingridientsGetResponse();
 

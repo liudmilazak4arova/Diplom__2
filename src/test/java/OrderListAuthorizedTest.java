@@ -4,9 +4,6 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
-
-import static org.hamcrest.CoreMatchers.equalTo;
 
 public class OrderListAuthorizedTest extends OrderBaseTest{
     @Test
@@ -25,7 +22,7 @@ public class OrderListAuthorizedTest extends OrderBaseTest{
         token = response.then().extract().path("accessToken");
 
         OrderCreateRequest orderCreateRequest = new OrderCreateRequest(ingreidientsId);
-        Response responseOrderCreate = orderClient.orderCreateAuthorizedResponse(orderCreateRequest, token);
+        orderClient.orderCreateAuthorizedResponse(orderCreateRequest, token);
 
         Response responseOrderList = orderClient.orderListAuthorizedResponse(token);
         responseOrderList.then().assertThat().statusCode(200);

@@ -10,7 +10,6 @@ public class UserRegisterDoubleTest extends UserBaseTest {
     public void registerUserTest() {
         UserRegisterRequest userRegisterRequest = new UserRegisterRequest(UserData.email, UserData.password, UserData.name);
         Response response = userClient.userRegisterResponse(userRegisterRequest);
-        //response.then().assertThat().statusCode(200).and().body("success", equalTo(true));
         token = response.then().extract().path("accessToken");
 
         Response response2 = userClient.userRegisterResponse(userRegisterRequest);

@@ -18,6 +18,6 @@ public class OrderBaseTest {
     @After
     public void revert(){
         if ((token!=null)){
-            Response responseDelete= userClient.userDeleteResponse(token);}
+            userClient.userDeleteResponse(token);}
     }
 }

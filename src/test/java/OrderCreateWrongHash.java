@@ -6,8 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import static org.hamcrest.CoreMatchers.equalTo;
-
 public class OrderCreateWrongHash extends  OrderBaseTest{
     @Test
     @DisplayName("Заказ из ингридиентов со случацным хешем")
@@ -17,7 +15,6 @@ public class OrderCreateWrongHash extends  OrderBaseTest{
         ingreidients.add(String.valueOf(hashCode()));
         OrderCreateRequest orderCreateRequest = new OrderCreateRequest(ingreidients);
         Response responseOrder = orderClient.orderCreateResponse(orderCreateRequest);
-
         responseOrder.then().assertThat().statusCode(500);
 
     }
