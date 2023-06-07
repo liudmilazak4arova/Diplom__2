@@ -1,0 +1,9 @@
+OrderCreateRequest.class
+OrderClient.class
+UserLoginRequest.class
+IngridientsResponse.class
+Ingridient.class
+UserData.class
+UserRegisterRequest.class
+UserClient.class
+GlobalData.class

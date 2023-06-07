@@ -1,0 +1,15 @@
+UserRegisterTest.class
+OrderBaseTest.class
+OrderCreateWithoutIngridientsTest.class
+OrderListAuthorizedTest.class
+OrderCreateWrongHash.class
+UserLoginTest.class
+UserPatchWithoutAutorizationTest.class
+UserBaseTest.class
+UserRegisterDoubleTest.class
+OrderCreateAuthorizedTest.class
+UserLoginWrongPassword.class
+OrderListAllTest.class
+UserCreateWithoutPasswordTest.class
+UserPatchTest.class
+OrderCreateTest.class
